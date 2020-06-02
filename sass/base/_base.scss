@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: inherit;
+  padding: 0;
+
+}
+
+
+html {
+  font-size: 62.5%;
+  /* it better to use a percentage so users can change font size manually */
+}
+body {
+  box-sizing: border-box;
+}
