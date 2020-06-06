@@ -4,14 +4,52 @@
   margin: 0;
   box-sizing: inherit;
   padding: 0;
-
 }
-
 
 html {
   font-size: 62.5%;
+  // 10px =1remlllllllllllllllllllll;//////////p/pp/p/
   /* it better to use a percentage so users can change font size manually */
+
+  // note
+  // always put biggest quereies on top
+  // size should go from top to down
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+    // 1 rem =12px
+    // so 12/16
+  }
+
+  @include respond(tab-land) {
+    // width<1200
+    font-size: 56.25%;
+    // 1rem=9px
+    // so 1rem = 9/16 which is 50%
+    // this precentage is always relateive to the 16 deafult size
+  }
+
+  @include respond(tab-port) {
+    // width<900
+    font-size: 50%;
+    // so 8/16 equals the size
+    // 1rem =8px
+  }
+
+  // @include respond(phone) {
+  //   // width<500
+  //   font-size: 30%;
+  //   // so 8/16 equals the size
+  //   // 1rem =8px
+  // }
 }
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    // width<900
+    padding: 0;
+    // so 8/16 equals the size
+    // 1rem =8px
+  }
 }

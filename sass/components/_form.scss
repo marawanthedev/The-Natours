@@ -48,6 +48,7 @@
     &:not(:last-child) {
       margin-bottom: 2rem;
     }
+   
   }
   
   &__radio-input{
@@ -56,12 +57,23 @@
   &__radio-group{
     width: 49%;
     display: inline-block;
+   
+    @include respond(tab-port){
+      width: 100%;
+      &:not(:first-child){
+        margin-bottom: 4rem;
+      }
+      }
   }
   &__radio-label {
     font-size: 1.6rem;
     cursor: pointer;
     position: relative;
     padding-left: 5rem;
+    @include respond(tab-port){
+      font-size: 2rem;
+      }
+ 
   }
   &__radio-button {
     height: 3rem;
@@ -72,6 +84,8 @@
     position: absolute;
     left: 0;
     top: -0.4rem;
+   
+   
     &::after {
       content: "";
       display: block;

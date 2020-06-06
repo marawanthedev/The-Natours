@@ -3,10 +3,15 @@
   padding: 10rem 0;
   font-size: 1.4rem;
   color: $color-gray-light-1;
-
+  @include respond(tab-port){
+    padding: 7rem 0;
+  }
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+    @include respond(tab-port){
+    margin-bottom: 5rem;
+    }
   }
   &__logo {
     width: 15rem;
@@ -16,6 +21,11 @@
     padding: 2rem;
     display: inline-block;
     // inline block take the box model for a block element but it still only takes spaec for its content and no more
+
+    @include respond(tab-port){
+      width: 100%;
+      text-align: center;
+    }
   }
   &__list {
     list-style: none;
@@ -48,6 +58,12 @@
     padding: 2rem;
     width: 80%;
     float: right;    
+
+    @include respond(tab-port){
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
     
 }
 }

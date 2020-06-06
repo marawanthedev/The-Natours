@@ -9,9 +9,12 @@
   padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  @include respond(phone){
+    transform:skewX(0);
+  }
   & > * {
     transform: skewX(12deg);
-
+  
     
     // this selects the direct child of the story element
     // and applies this properties to it
@@ -36,9 +39,15 @@
     backface-visibility: hidden;
     outline: none;
     overflow: hidden;
+    @include respond(phone){
+      transform: translateX(-3rem) skewX(0);
+  }
   }
   &__text {
     transform: skewX(12deg);
+    @include respond(phone){
+      transform: skewX(0);
+    }
   }
   &__img {
     height: 100%;
@@ -69,4 +78,10 @@
     outline: none;
     filter: blur(3px) brightness(80%);
   }
+  @include respond(tab-port){
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+ 
 }

@@ -4,7 +4,6 @@ body {
     /* font-size: 16px; */
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
     box-sizing: border-box;
   }
   
@@ -19,6 +18,8 @@ body {
     backface-visibility: hidden;
     /* backface-visibility:  to hidden fixes some animation shaking bugs; */
     margin-bottom: 6rem;
+
+   
   
     &--main {
       display: block;
@@ -34,6 +35,15 @@ body {
     
       /* animation-iteration-count:3; */
       /* animation loop */
+
+      @include respond(phone) {
+        // width<500
+        letter-spacing: 1rem;
+        font-size: 5rem;
+        // so 8/16 equals the size
+        // 1rem =8px
+      }
+
     }
     &--sub {
       display: block;
@@ -42,6 +52,13 @@ body {
       letter-spacing: 1.75rem;
       animation: moveInRight 1s ease-in forwards;
       color: $color-white;
+
+      @include respond(phone) {
+        // width<500
+        letter-spacing:.5rem;
+        // so 8/16 equals the size
+        // 1rem =8px
+      }
     }
   
   }
@@ -52,6 +69,19 @@ body {
     font-weight: 700;
     display: inline-block;
 
+    @include respond(tab-port) {
+      // width<900
+      font-size: 3rem;
+      // so 8/16 equals the size
+      // 1rem =8px
+    }
+
+    @include respond(phone) {
+      // width<500
+      font-size: 2.5rem;
+      // so 8/16 equals the size
+      // 1rem =8px
+    }
     background: linear-gradient(to right ,$color-primary-light,$color-primary-dark);
     -webkit-background-clip: text;
     color:transparent;
