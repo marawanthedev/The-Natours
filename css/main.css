@@ -1003,9 +1003,12 @@ body {
       .popup__content {
         flex-direction: column; }
       .popup__img {
-        height: 20rem; }
+        height: 18rem; }
       .popup__left {
         width: 100%; }
       .popup__right {
         width: 100%;
-        padding: 3rem 2.5rem; } }
+        padding: 2rem 2.5rem; }
+      .popup__text {
+        font-size: 1.2rem;
+        margin-bottom: 2rem; } }

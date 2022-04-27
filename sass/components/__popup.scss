@@ -87,7 +87,7 @@
       flex-direction: column;
     }
     &__img {
-      height: 20rem;
+      height: 18rem;
     }
     &__left {
       width: 100%;
@@ -95,7 +95,11 @@
     }
     &__right {
       width: 100%;
-      padding: 3rem 2.5rem;
+      padding: 2rem 2.5rem;
+    }
+    &__text {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
   }
 }
